@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('FILESYSTEM_DRIVER', 'local'),
+    'default' => env('FILESYSTEM_DRIVER', 'public'),
 
     /*
     |--------------------------------------------------------------------------
@@ -71,6 +71,15 @@ return [
             'secret' => env('AWS_SECRET_ACCESS_KEY'),
             'region' => env('AWS_DEFAULT_REGION'),
             'bucket' => env('AWS_BUCKET'),
+        ],
+
+        'bucketeer' => [
+            'driver' => 's3',
+            'key'    => env('BUCKETEER_AWS_ACCESS_KEY_ID'),
+            'secret' => env('BUCKETEER_AWS_SECRET_ACCESS_KEY'),
+            'region' => env('BUCKETEER_AWS_REGION'),
+            'bucket' => env('BUCKETEER_BUCKET_NAME'),
+            'root'   => 'public',
         ],
 
     ],
