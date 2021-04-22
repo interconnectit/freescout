@@ -171,7 +171,8 @@
             "@php artisan package:discover"
         ],
         "release": [
-            "@php artisan migrate --force"
+            "@php artisan migrate --force",
+            "@php artisan freescout:build"
         ],
         "warmup": [
             "@php artisan config:cache",
