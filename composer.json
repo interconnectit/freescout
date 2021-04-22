@@ -161,7 +161,8 @@
     },
     "scripts": {
         "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "@php artisan storage:link"
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate"
@@ -172,7 +173,6 @@
         ],
         "release": [
             "@php artisan migrate --force",
-            "@php artisan storage:link"
         ],
         "warmup": [
             "@php artisan config:cache",
