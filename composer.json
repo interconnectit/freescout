@@ -171,7 +171,8 @@
             "@php artisan package:discover"
         ],
         "release": [
-            "@php artisan migrate --force"
+            "@php artisan migrate --force",
+            "@php artisan storage:link"
         ],
         "warmup": [
             "@php artisan config:cache",
